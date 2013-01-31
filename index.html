@@ -7,13 +7,30 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<style>
+		.ui-grid-a .ui-block-a { width: 9.7% }
+		.ui-grid-a .ui-block-b { width: 90.3% }
+		
+		.ui-grid-b .ui-block-a {width:49% }
+		.ui-grid-b .ui-block-b {width:2% }
+		.ui-grid-b .ui-block-c {width:49% }
+
+    </style>		
 </head> 
 <body> 
 
 <div data-role="page" id="home">
 
-	<div data-role="header">
-		<img src="images/bsr.jpg" style="float:left;display:inline" width="100%" />
+	<div data-role="header" style="background-color: white;">
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+				<a href="http://www.facebook.com/blacksquirrelradio?fref=ts"><img src="images/facebook-icon-small1.jpg" style="float:left;display:inline" width="120%"/></a>
+				<a href="https://twitter.com/BSRKent"><img src="images/twitter.png" style="float:left;display:inline" width="105%"/></a>
+				<a href="http://blacksquirrelradio.tumblr.com/"><img src="images/6313-tumblr-icon.png" style="float:left;display:inline" width="105%"/></a>
+			</div>
+			<div class="ui-block-b"><img src="images/bsr.jpg" style="float:left;display:inline" width="100%" /></div>
+		</div>
+		
 	</div><!-- /header -->
 
 	<div data-role="content" style="background-color: black;">	
@@ -24,19 +41,19 @@
 		 
 		<br /> 
 		
-		<div class="ui-grid-a">
+		<div class="ui-grid-b">
 			<div class="ui-block-a"><a href="playRadio.html"><img src="images/listen.jpg" style="width:100%;height:auto;"/></a></div>
-			<div class="ui-block-b"><a href="playVideo.html"><img src="images/watch.jpg" style="width:100%;height:auto;"/></a></div>
+			<div class="ui-block-b"></div>
+			<div class="ui-block-c"><a href="playVideo.html"><img src="images/watch.jpg" style="width:100%;height:auto;"/></a></div>
 		</div><!-- /grid-a -->
 		
 		<br />
 		
-		<ul data-role="listview" data-theme="a">
-			<li><a href="programGuide.html">Program Guide</a></li>
-			<li><a href="audi.html">News</a></li>
-			<li><a href="bmw.html">About US</a></li>
-			<li><a href="#" />Book US</li>
-		</ul>	
+		<a href="http://www.amazon.com" data-role="button"  data-theme="a">PROGRAMMING GUIDE</a>
+		<a href="http://www.amazon.com" data-role="button"  data-theme="a">NEWS</a>
+		<a href="http://www.amazon.com" data-role="button"  data-theme="a">ABOUT US</a>
+              <a href="http://www.amazon.com" data-role="button"  data-theme="a">BOOK US</a>
+	
 	
 	
 	</div><!-- /content -->
