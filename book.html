@@ -4,50 +4,55 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
-	<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	
 	<title>Multi-page template</title> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-	<script src="index.js"></script>
+	<script src="programGuide.js"></script>
 </head> 
 <body> 
 
-<div data-role="page" id="home">
+<div data-role="page" id="book">
 
 	<div data-role="header">
 		<img src="images/bsr.jpg" style="float:left;display:inline" width="100%" />
 	</div><!-- /header -->
 
 	<div data-role="content">	
-				
-		<ul data-role="listview" data-theme="a" data-role="listview">
-			<li id="nowPlaying"><h1 align="center"></li>
-		</ul>
-		 
-		<br /> 
 		
-		<div class="ui-grid-a">
-			<div class="ui-block-a"><a id="listenURL" href="listen.html"><img src="images/listen.jpg" style="width:100%;height:auto;"/></a></div>
-			<div class="ui-block-b"><img src="images/watch.jpg" style="width:100%;height:auto;"/></div>
-		</div><!-- /grid-a -->
+		<p>Black Squirrel Radio provides mobile DJ's for any event. Just fill out the information, and someone will be in contact with you shortly.</p>
 		
-		<br />
+		<form action="book.php" method="post">
+			
+			<div data-role="fieldcontain">
+				<label for="genre">Genre:</label>
+				<input type="text" name="genre" id="genre" value="" />
+			</div>
+			
+			<div data-role="fieldcontain">
+				<label for="name">Name:</label>
+				<input type="text" name="name" id="name" value="" />
+			</div>
 		
-		<ul data-role="listview" data-theme="a">
-			<li><a href="programGuide.html">Program Guide</a></li>
-			<li><a href="book.html">Book Us</a></li>
-			<li><a href="about.html">About US</a></li>
-		</ul>	
+			<div data-role="fieldcontain">
+				<label for="phone">Phone#:</label>
+				<input type="text" name="phone" id="phone" value="" />
+			</div>
+		
+			<div data-role="fieldcontain">
+				<label for="description">More Info:</label>
+				<textarea name="description" id="description"></textarea>
+			</div>
+			
+			<button type="submit" data-theme="a">Book Us!</button>
+		</form>
+		
+						
 	
-		<br />
-		
-		
-	
-	</div><!-- /content -->
-
-	<div data-role="footer" data-position="fixed" data-id="myfooter"> 
+		<div data-role="footer" data-position="fixed" data-id="myfooter"> 
 						
 			<a href='index.html' class='ui-btn-left ui-btn-back' data-icon='arrow-l'>Back</a>
 			
@@ -58,12 +63,11 @@
 				<a href="http://blacksquirrelradio.tumblr.com/"><img src="images/tumblr_icon_50.png"/></a>
 			</div>
 		
-		</div> 
-
+		</div> 	
+	
+	</div><!-- /content -->
 </div><!-- /page -->
 </body>
 <script>
-//change the listen link to the correct url depending if android or iPhone
-	setListenURL();
 </script>
 </html>

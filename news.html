@@ -1,0 +1,46 @@
+
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>My Page</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+</head> 
+<body> 
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>My Title</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<div id="feed"></div>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+</body>
+<script>
+
+google.load("feeds", "1");
+
+    function initialize() {
+      var feed = new google.feeds.Feed("http://www.blacksquirrelradio.com/index.php?format=feed&type=rss");
+      feed.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("feed");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+          	$("#feed").append(entry.content + '<br />');
+          }
+        }
+      });
+    }
+    google.setOnLoadCallback(initialize);
+
+</script>
+</html>

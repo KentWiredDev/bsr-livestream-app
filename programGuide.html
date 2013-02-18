@@ -9,8 +9,7 @@
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>	
 </head> 
 <body> 
-
-<div data-role="page" id="home">
+<div data-role="page" id="programGuide">
 
 	<div data-role="header">
 		<img src="images/bsr.jpg" style="float:left;display:inline" width="100%" />
@@ -19,32 +18,38 @@
 	<div data-role="content">	
 		
 		<div data-role="fieldcontain" data-theme="a">
-			<select name="select-choice-1" id="select-choice-1" data-theme="a">
-				<option value="standard">Monday</option>
-				<option value="rush">Tuesday</option>
-				<option value="express">Wednesday</option>
-				<option value="overnight">Thursday</option>
-				<option value="overnight">Friday</option>
-				<option value="overnight">Saturday</option>
-				<option value="overnight">Sunday</option>
+			<select name="select-choice-1" id="dayPicker" data-theme="a" onchange="onSelectionChanged();">
+				<option value="monday" id="test">Monday</option>
+				<option value="tuesday">Tuesday</option>
+				<option value="wednesday">Wednesday</option>
+				<option value="thursday">Thursday</option>
+				<option value="friday">Friday</option>
+				<option value="saturday">Saturday</option>
+				<option value="sunday">Sunday</option>
 			</select>
 		</div>
 	
 		<br />
 		
-		<ul data-role="listview" data-theme="a" data-split-theme="d">
-			<li>RADIO SHOW<p class="ui-li-aside">10AM-12PM</p></li>
-			<li>WE PLAY MUSIC<p class="ui-li-aside">12PM-2PM</p></li>
-			<li>MOONTIME RADIO<p class="ui-li-aside">2PM-4PM</p></li>
-			<li>COLLEGE RRRAADDDIIIOO<p class="ui-li-aside">4PM-6PM</p></li>
-			<li>COLLEGE RRRAADDDIIIOO<p class="ui-li-aside">6PM-8PM</p></li>
-			<li>COLLEGE RRRAADDDIIIOO<p class="ui-li-aside">8PM-10PM</p></li>
-			<li>COLLEGE RRRAADDDIIIOO<p class="ui-li-aside">10PM-12AM</p></li>
-			<li>COLLEGE RRRAADDDIIIOO<p class="ui-li-aside">12AM-2AM</p></li>
+		<ul data-role="listview" data-theme="a" data-split-theme="d" id="day">
+
 		</ul>	
 	
 	
 	</div><!-- /content -->
+
+		<div data-role="footer" data-position="fixed" data-id="myfooter"> 
+						
+			<a href='index.html' class='ui-btn-left ui-btn-back' data-icon='arrow-l'>Back</a>
+			
+			
+			<div align="right">
+				<a href="http://twitter.com/BSRKent"><img src="images/TwitterIcon_small1.png" height="50" width="auto"/></a>
+				<a href="http://www.facebook.com/blacksquirrelradio"><img src="images/facebook.jpg"/></a>
+				<a href="http://blacksquirrelradio.tumblr.com/"><img src="images/tumblr_icon_50.png"/></a>
+			</div>
+		
+		</div> 
 
 </div><!-- /page -->
 </body>
