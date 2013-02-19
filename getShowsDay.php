@@ -74,7 +74,42 @@
 	
 	
 	//get the day of the week that was posted over
+	//if none, then we are just going to use the day acording to the server
 	$day = $_GET['day'];
+	if(!isset($day))
+	{
+		date_default_timezone_set('US/Eastern');
+		$dayOfTheWeek = date('N');
+		if($dayOfTheWeek == 1)
+		{
+			$day = "monday";
+		}
+		if($dayOfTheWeek == 2)
+		{
+			$day = "tuesday";
+		}
+		if($dayOfTheWeek == 3)
+		{
+			$day = "wednesday";
+		}
+		if($dayOfTheWeek == 4)
+		{
+			$day = "thursday";
+		}
+		if($dayOfTheWeek == 5)
+		{
+			$day = "friday";
+		}
+		if($dayOfTheWeek == 6)
+		{
+			$day = "saturday";
+		}
+		if($dayOfTheWeek == 7)
+		{
+			$day = "sunday";
+		}
+	}
+	
 	$dayArray = $mondayShows;
 	if (strcmp($day, "monday") == 0)
 	{
