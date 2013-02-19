@@ -6,7 +6,8 @@ function setListenURL()
 	var isiPhone= ua.indexOf("iphone" || "ipod") > -1; //&& ua.indexOf("mobile");
 	if(isiPhone)
 	{
-		document.getElementById("listenURL").href = "http://131.123.202.81:8000/listen.pls?sid=1";
+		//document.getElementById("listenURL").href = "http://131.123.202.81:8000/listen.pls?sid=1";
+		document.getElementById("listenURL").href = "playIphone.html";
 	}
 	else
 	{
@@ -99,7 +100,6 @@ $("#programGuide").live('pagebeforeshow', function(){
 	var chosenDay = $("#dayPicker").val();
 	$.ajax({ url: 'getShowsDay.php',
          dataType: "json",
-         data: {"day" : chosenDay },
          success: function(output) {
                setShowText(output);
         
